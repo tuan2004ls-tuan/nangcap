@@ -13,7 +13,7 @@ function formatMoney(val) {
 }
 
 function calcNextBetOnWin(currentBet, wonAmount) {
-  return (currentBet * 2 - wonAmount) / 2;
+  return (currentBet * 2 - wonAmount) / 1.95;
 }
 
 // Tổng quát hoá công thức thua: thua hết (mất 100% cược) -> x1.5,

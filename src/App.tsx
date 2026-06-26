@@ -70,9 +70,9 @@ export default function App() {
     let mounted = true;
     (async () => {
       try {
-        const saved = await window.storage.get(STORAGE_KEY);
-        if (mounted && saved && saved.value) {
-          const parsed = JSON.parse(saved.value);
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (mounted && saved) {
+          const parsed = JSON.parse(saved); // Bỏ .value đi vì localStorage trả về chuỗi trực tiếp
           if (parsed.history) setHistory(parsed.history);
           if (parsed.currentBet !== undefined) setCurrentBet(parsed.currentBet);
           if (parsed.round !== undefined) setRound(parsed.round);
@@ -97,7 +97,7 @@ export default function App() {
     (async () => {
       try {
         const stateToSave = { history, currentBet, round, totalLost, totalWon };
-        await window.storage.set(STORAGE_KEY, JSON.stringify(stateToSave));
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave)); // Dùng localStorage.setItem
       } catch (e) {
         console.error("Lỗi khi lưu dữ liệu:", e);
       }
@@ -239,7 +239,7 @@ export default function App() {
       setShowLoseInput(false);
       setTotalLost(0);
       setTotalWon(0);
-      window.storage.delete(STORAGE_KEY).catch(() => {});
+      localStorage.removeItem(STORAGE_KEY); // Dùng localStorage.removeItem
     }
   }
 

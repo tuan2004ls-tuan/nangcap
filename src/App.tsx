@@ -17,7 +17,7 @@ function formatMoney(val) {
     (Number(val) || 0).toLocaleString("vi-VN", {
       minimumFractionDigits: 0,
       maximumFractionDigits: 2,
-    }) + "k"
+    }) + "usdt"
   );
 }
 

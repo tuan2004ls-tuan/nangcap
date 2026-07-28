@@ -9,8 +9,8 @@ const STORAGE_KEY = "betting_tool_state_v4";
 // Khi THẮNG: nếu số công thức rơi xuống DƯỚI mốc đang giữ -> về đúng mốc đó,
 // phần dư vào "Lãi rút thang" = (mốc - số công thức) x 2. Nếu không thì giữ số công thức
 // (thắng ít -> đi theo công thức, VD 10.000k thắng nhỏ -> 9.949k, chưa xuống 9.000k).
-const LADDER_TOP = 10000; // trần giữ mốc = 10.000k
-const LADDER_STEP = 1000; // mốc nghìn (1.000k)
+const LADDER_TOP = 15; // trần giữ mốc = 10.000k
+const LADDER_STEP = 1.5; // mốc nghìn (1.000k)
 
 function formatMoney(val) {
   return (

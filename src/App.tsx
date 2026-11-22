@@ -11,7 +11,7 @@ const STORAGE_KEY = "betting_tool_state_v4";
 const K = 4;
 const WIN_MULT = K; // công thức thắng: (cược × K − thắng) / K
 const STACK_DIV = K; // số ĐÁNH chia K
-const CAPITAL_DIV = Math.round((K - 0.03) * 100) / 100; // vốn gốc chia (K − 0.03 phí, như cũ 2 − 0.03)
+const CAPITAL_DIV = Math.round((K - 0.01) * 100) / 100; // vốn gốc chia (K − 0.03 phí, như cũ 2 − 0.03)
 const LADDER_GAIN = K; // lãi rút thang = (số về − số công thức) × K (cũ ×2)
 const LOSS_FULL_X = Math.round((1 + 1 / K) * 100) / 100; // hiển thị thua hết
 const LOSS_HALF_X = Math.round((1 + 0.5 / K) * 100) / 100; // hiển thị thua nửa

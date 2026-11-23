@@ -34,8 +34,8 @@ const LADDER_STEP = 500; // mốc nghìn (1.000k)
 const STACK_ENTER = 50000; // > mức này thì BẬT chế độ chia
 const STACK_EXIT = 20000; // vốn <= mức này thì TẮT; stack < mức này thì RESET
 const STACK_TIER = 50000; // mỗi +50.000k vốn thì hệ số +0.5
-const STACK_FINE = 20000; // số ĐÁNH khi tụt tới mức này thì đổi sang bước tinh
-const STACK_FINE_STEP = 2000; // bước tinh = 20tr/10 (20 -> 18 -> 16...)
+const STACK_FINE = 25000; // số ĐÁNH khi tụt tới mức này thì đổi sang bước tinh
+const STACK_FINE_STEP = 2500; // bước tinh = 20tr/10 (20 -> 18 -> 16...)
 
 function round1(x) {
   return Math.round(x * 10) / 10;

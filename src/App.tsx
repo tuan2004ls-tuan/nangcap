@@ -8,7 +8,7 @@ const STORAGE_KEY = "betting_tool_state_v4";
 //   Thua x  -> D += x      -> cược kế = cược + x / K   (thua hết: ×(1 + 1/K))
 //   Thắng x -> D -= x      -> cược kế = cược − x / K   = (cược×K − x) / K
 // K = 2: thua hết ×1.5 ; K = 3: thua hết ×1.33 ; K = 2.857: thua hết ×1.35
-const K = 3;
+const K = 2;
 const WIN_MULT = K; // công thức thắng: (cược × K − thắng) / K
 const STACK_DIV = K; // số ĐÁNH chia K
 const CAPITAL_DIV = Math.round((K - 0.01) * 100) / 100; // vốn gốc chia (K − 0.03 phí, như cũ 2 − 0.03)
